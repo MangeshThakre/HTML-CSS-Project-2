@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Live%20Project%202-Hosting%20Landing%20Page-brightgreen)
+![](https://img.shields.io/badge/Live%20Project%202-Foods%20Restaurant%20Home%20Page-brightgreen)
 
 # Street Style Landing Page 
 > HTML - CSS Project-2 
