@@ -45,7 +45,7 @@ body {
   cursor: pointer;
   list-style: none;
   height: 30px;
-  transition: all 0.3s ease ;
+  transition: all 0.3s ease;
 }
 .list :hover {
   border-bottom: solid 3px #ffc233;
@@ -58,12 +58,12 @@ body {
   border: none;
   background-color: #ff505f;
   color: #fff;
- transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
-.button-small:hover{
- border: 2px solid #ff505f;
- color:#ff505f;
- background-color: transparent;
+.button-small:hover {
+  border: 2px solid #ff505f;
+  color: #ff505f;
+  background-color: transparent;
 }
 
 /* ------------------------------ */
@@ -99,13 +99,12 @@ section[aria-label="hero"] {
   font-size: 15px;
 }
 
-.button-large:hover{
-  transition: all  0.4s ease ;
+.button-large:hover {
+  transition: all 0.4s ease;
   border: 2px solid #ff505f;
-  color:#ff505f;
+  color: #ff505f;
   background-color: transparent;
- }
-
+}
 
 .bottom > div {
   position: absolute;
@@ -114,4 +113,87 @@ section[aria-label="hero"] {
 }
 .bottom > div > img {
   height: 130px;
+}
+
+/* media query */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 3% 30px 30px 30px;
+  }
+
+  .navbar > div img {
+    width: 5rem;
+  }
+
+  .list {
+    display: none;
+  }
+
+  section[aria-label="hero"] {
+    margin: 3% 100px 50px 100px;
+    height: "";
+  }
+
+  .hero > h1 {
+    color: #fec133;
+    font-size: 55px;
+    text-align: center;
+    line-height: 66px;
+  }
+  .button-large {
+    height: 45px;
+    width: 165px;
+    color: #fff;
+    background-color: #ff505f;
+    border: navajowhite;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+
+  .bottom > div > img {
+    height: 85px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding: 10% 30px 30px 30px;
+  }
+
+  section[aria-label="hero"] {
+    margin: 30% 25px 50px 25px;
+    height: "";
+  }
+
+  .hero > h1 {
+    color: #fec133;
+    font-size: 40px;
+    text-align: center;
+    line-height: 57px;
+  }
+
+  .bottom > div {
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+  }
+
+  .button-large {
+    height: 45px;
+    width: 165px;
+    color: #fff;
+    background-color: #ff505f;
+    border: navajowhite;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 15px;
+  }
+
+
+
+
+
 }
