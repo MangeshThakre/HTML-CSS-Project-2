@@ -278,8 +278,8 @@ section[aria-label="hero"] {
     position: absolute;
     backdrop-filter: blur(43px);
     left: 0;
-    height: 100%;
-    top: 75px;
+    height: 80vh;
+    top: 95px;
     width: 55%;
     /* background-color: #fec133; */
   }
