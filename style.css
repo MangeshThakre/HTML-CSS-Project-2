@@ -30,7 +30,7 @@ body {
   align-items: center;
   padding: 3% 50px 30px 50px;
 }
-.navbar > div > img {
+.navbar > div > .logo {
   cursor: pointer;
   width: 7rem;
 }
@@ -114,20 +114,105 @@ section[aria-label="hero"] {
 .bottom > div > img {
   height: 130px;
 }
+.cart {
+  width: 20px;
+  margin-right: 10px;
+}
 
 /* media query */
+
+.hamburger-menu::before {
+  position: absolute;
+  content: "";
+  background: #ff505f;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu {
+  display: none;
+  background: #ff505f;
+
+  width: 24px;
+  height: 3px;
+  margin-left: 1rem;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu::after {
+  position: absolute;
+  content: "";
+  background: #ff505f;
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 20px;
+  top: 6px;
+  transition: all 0.3s ease;
+}
+
+.cross-menu::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.cross-menu {
+  background: transparent;
+}
+
+.cross-menu::after {
+  transition: all 0.3s ease;
+  top: 0px;
+  transform: rotate(-45deg);
+}
+.navbar > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+.close {
+  display: block;
+}
 
 @media (max-width: 800px) {
   .navbar {
     padding: 3% 30px 30px 30px;
+    position: relative;
+    backdrop-filter: blur(43px);
   }
 
-  .navbar > div img {
+  .navbar > div .logo {
     width: 5rem;
   }
 
-  .list {
+  .hamburger-menu {
+    display: block;
+  }
+  .button-small {
     display: none;
+  }
+  .list {
+    display: block;
+    width: 100%;
+  }
+  .list > li {
+    margin: 3rem;
+  }
+  .close {
+    display: none;
+  }
+
+  .navbar > div:nth-child(2) {
+    position: absolute;
+    backdrop-filter: blur(43px);
+    left: 0;
+    height: 100vh;
+    top: 86px;
+    width: 30%;
   }
 
   section[aria-label="hero"] {
@@ -155,12 +240,17 @@ section[aria-label="hero"] {
   .bottom > div > img {
     height: 85px;
   }
-
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .navbar {
     padding: 10% 30px 30px 30px;
+    position: relative;
+    backdrop-filter: blur(43px);
+  }
+
+  .hamburger-menu {
+    display: block;
   }
 
   section[aria-label="hero"] {
@@ -181,6 +271,21 @@ section[aria-label="hero"] {
     right: 30px;
   }
 
+  .close {
+    display: none;
+  }
+  .navbar > div:nth-child(2){
+    position: absolute;
+    backdrop-filter: blur(43px);
+    left: 0;
+    height: 100%;
+    top: 75px;
+    width: 55%;
+    /* background-color: #fec133; */
+  }
+
+
+
   .button-large {
     height: 45px;
     width: 165px;
@@ -192,8 +297,11 @@ section[aria-label="hero"] {
     font-size: 15px;
   }
 
-
-
-
-
+  .list {
+    display: block;
+    width: 100%;
+  }
+  .list > li {
+    margin: 3rem;
+  }
 }

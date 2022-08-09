@@ -28,7 +28,7 @@
           <div>
             <img src="./assets/white-logo.png" alt="logo" class="logo" />
           </div>
-          <div>
+          <div class="close">
             <ul class="list">
               <li class="list-item">Our Menu</li>
               <li class="list-item">Maps</li>
@@ -36,8 +36,11 @@
               <li class="list-item">Contact</li>
             </ul>
           </div>
-          <div>
+          <div class="buttoncontainer">
+            <img src="./assets/cart.svg" class="cart" alt="cart">
             <button class="button-small">Order</button>
+            <div class ="hamburger-menu "> </div>
+
           </div>
         </nav>
       </section>
@@ -57,4 +60,24 @@
       </section>
     </div>
   </body>
+
+
+  <script>
+  
+    // const herocontainer = document.querySelector(".hero-container")
+    // const body = document.querySelector(".body")
+    const sidebarMenu = document.querySelector(".close")
+    const buttoncontainer =document.querySelector(".buttoncontainer")
+    const burgermenu = document.querySelector(".hamburger-menu")
+    buttoncontainer.addEventListener('click' , (e)=>{
+      burgermenu.classList.toggle("cross-menu")
+      sidebarMenu.classList.toggle("close")
+      // body.classList.toggle("hide-scroll")
+      // herocontainer.classList.toggle("shadow")
+      
+    })
+  
+  </script>
+
+
 </html>
